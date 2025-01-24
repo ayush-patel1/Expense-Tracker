@@ -2,7 +2,7 @@
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-// const geistSans = Geist({
+// const geistSansFont = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
 // });
@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider
-     publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+     publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "default_publishable_key"}
     >
       <html lang="en">
         <body >{children}</body>
