@@ -16,7 +16,7 @@ function Header() {
           </div>
           {isSignedIn?(<UserButton/>) : (<div className="flex flex-row items-center gap-4">
             <Link href="/dashboard"><Button className="bg-gray-400 rounded-full text-gray-900 font-bold hover:bg-gray-800 hover:text-yellow-500">Dashboard</Button></Link>
-            <Link href="/dashboard"><Button  className="bg-gray-900 rounded-full text-gray-50 font-semibold hover:bg-gray-800 hover:text-yellow-500">Get started</Button></Link>
+            <Link href="/sign-in"><Button  className="bg-gray-900 rounded-full text-gray-50 font-semibold hover:bg-gray-800 hover:text-yellow-500">Get started</Button></Link>
           </div>)}
         </div>
     )

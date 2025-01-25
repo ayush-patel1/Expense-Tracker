@@ -6,12 +6,11 @@ import {
   ReceiptText,
   ShieldCheck,
   CircleDollarSign,
-  TrendingUp,
-  TrendingDownIcon,
 } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+
 function SideNav() {
   const menuList = [
     {
@@ -27,51 +26,36 @@ function SideNav() {
       path: "/dashboard/incomes",
     },
     {
-      id: 2,
+      id: 3,
       name: "Budgets",
       icon: PiggyBank,
       path: "/dashboard/budgets",
     },
     {
-      id: 3,
+      id: 4,
       name: "Expenses",
       icon: ReceiptText,
       path: "/dashboard/expenses",
     },
-    // {
-    //   id: 2,
-    //   name: "Investments",
-    //   icon: TrendingUp,
-    //   path: "/dashboard/investments",
-    // },
-    // {
-    //   id: 2,
-    //   name: "Debts",
-    //   icon: TrendingDownIcon,
-    //   path: "/dashboard/debts",
-    // },
     {
-      id: 4,
+      id: 5,
       name: "Upgrade",
       icon: ShieldCheck,
       path: "/dashboard/upgrade",
     },
   ];
+
   const path = usePathname();
 
   useEffect(() => {
     console.log(path);
   }, [path]);
+
   return (
     <div className="h-screen p-5 border shadow-sm">
-      {/* <Image src={'/logo.svg'}
-        alt='logo'
-        width={160}
-        height={100}
-        /> */}
       <div className="flex flex-row items-center">
         <Image src={"./chart-donut.svg"} alt="logo" width={40} height={25} />
-        <span className="text-blue-800 font-bold text-xl">FinanSmart</span>
+        <span className="text-yellow-800 font-bold text-xl">FinanSmart</span>
       </div>
       <div className="mt-5">
         {menuList.map((menu, index) => (
@@ -82,8 +66,7 @@ function SideNav() {
                     mb-2
                     p-4 cursor-pointer rounded-full
                     hover:text-primary hover:bg-yellow-200
-                    ${path == menu.path && "text-primary bg-yellow-200"}
-                    `}
+                    ${path == menu.path && "text-primary bg-yellow-200"}`}
             >
               <menu.icon />
               {menu.name}
@@ -91,12 +74,9 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div
-        className="fixed bottom-10 p-5 flex gap-2
-            items-center"
-      >
+      <div className="mt-10 flex gap-2 items-center">
         <UserButton />
-        Profile
+        <span className="text-gray-700 font-medium">Profile</span>
       </div>
     </div>
   );
