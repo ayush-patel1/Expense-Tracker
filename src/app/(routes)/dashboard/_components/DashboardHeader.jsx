@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { UserButton, useUser } from "@clerk/nextjs";
-import CardInfo from "./_components/CardInfo";
-import { db } from "@/utils/dbConfig";
+import CardInfo from "./CardInfo";
+import { db } from "../../../../../utils/dbConfig";
 import { desc, eq, getTableColumns, sql } from "drizzle-orm";
-import { Budgets, Expenses, Incomes } from "@/utils/schema";
-import BarChartDashboard from "./_components/BarChartDashboard";
-import BudgetItem from "./budgets/_components/BudgetItem";
-import ExpenseListTable from "./expenses/_components/ExpenseListTable";
+import { Budgets, Expenses, Incomes } from "../../../../../utils/schema";
+import BarChartDashboard from "./BarChartDashboard";
+import BudgetItem from "../budgets/_components/BudgetItem";
+import ExpenseListTable from "../expenses/_components/ExpenseListTable";
 function Dashboard() {
   const { user } = useUser();
 
@@ -97,15 +97,15 @@ function Dashboard() {
         <div className="grid gap-5">
           <h2 className="font-bold text-lg">Latest Budgets</h2>
           {budgetList?.length > 0
-            ? budgetList.map((budget, index) => (
-                <BudgetItem budget={budget} key={index} />
-              ))
-            : [1, 2, 3, 4].map((item, index) => (
-                <div
-                  className="h-[180xp] w-full
-                 bg-slate-200 rounded-lg animate-pulse"
-                ></div>
-              ))}
+  ? budgetList.map((budget, index) => (
+      <BudgetItem budget={budget} key={index} />
+    ))
+  : [1, 2, 3, 4].map((item, index) => (
+      <div
+        key={index}
+        className="h-[180xp] w-full bg-slate-200 rounded-lg animate-pulse"
+      ></div>
+    ))}
         </div>
       </div>
     </div>

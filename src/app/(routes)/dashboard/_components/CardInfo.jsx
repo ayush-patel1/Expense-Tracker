@@ -1,4 +1,4 @@
-
+"use client"
 import {
     PiggyBank,
     ReceiptText,
@@ -30,7 +30,7 @@ function CardInfo({ budgetList, incomeList }) {
             };
             fetchFinancialAdvice();
         }
-    }, [totalBudget, totalSpend, totaIncome]);
+    }, [totalBudget, totalSpend, totalIncome]);
 
     const CalculateCardInfo=()=>{
         let totalBudget_ = 0;    

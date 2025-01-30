@@ -1,9 +1,9 @@
 "use client"
-import { db } from '@/utils/dbConfig';
+import { db } from '../../../../../utils/dbConfig';
 import { Budgets, Expenses } from '@/utils/schema';
 import { desc, eq } from 'drizzle-orm';
 import React, { useEffect, useState } from 'react'
-import ExpenseListTable from '../_components/ExpenseListTable';
+import ExpenseListTable from './_components/ExpenseListTable';
 import { useUser } from '@clerk/nextjs';
 
 function ExpensesScreen() {
