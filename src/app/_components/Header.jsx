@@ -10,7 +10,6 @@ function Header() {
     return (
         <div className="p-5 flex justify-between items-center border-gray-700 bg-gray-200 shadow-sm pl-10 pr-10">
           <div className="flex flex-row items-center">
-            {/* {logo} */}
             <Image src={'/chart-donut.svg'} alt='logo' width={40} height={25}></Image>
             <span className="text-yellow-900 text-2xl tracking-wide font-extrabold">Smart Finance</span>
           </div>

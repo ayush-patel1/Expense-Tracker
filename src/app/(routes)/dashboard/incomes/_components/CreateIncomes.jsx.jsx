@@ -115,4 +115,5 @@ function CreateIncomes({ refreshData }) {
   );
 }
 
+
 export default CreateIncomes;

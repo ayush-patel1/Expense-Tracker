@@ -18,7 +18,7 @@ function IncomeList() {
     const result = await db
       .select({
         ...getTableColumns(Incomes),
-        totalSpend: sql`sum(${Expenses.amount})`.mapWith(Number),
+        totalSpend: sql`sum(CAST(${Expenses.amount} AS numeric))`.mapWith(Number),
         totalItem: sql`count(${Expenses.id})`.mapWith(Number),
       })
       .from(Incomes)
@@ -28,7 +28,7 @@ function IncomeList() {
       .orderBy(desc(Incomes.id));
     setIncomelist(result);
   };
-
+  
   return (
     <div className="mt-7">
       <div

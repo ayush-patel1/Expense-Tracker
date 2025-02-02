@@ -48,5 +48,4 @@ function ExpenseListTable({ expensesList, refreshData }) {
     </div>
   );
 }
-
 export default ExpenseListTable;
