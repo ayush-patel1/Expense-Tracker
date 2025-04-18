@@ -1,4 +1,6 @@
-```bash
+Here's the full README in GitHub-flavored markdown format, including the section for deploying on Vercel:
+
+```markdown
 # Smart Finance App
 
 Smart Finance is an intelligent financial management application that helps you track, plan, and optimize your expenses. Integrated with OpenAI, it provides personalized recommendations and suggestions based on your financial data. The app is built using modern technologies to ensure performance, scalability, and a user-friendly experience.
@@ -99,12 +101,20 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Tailwind CSS](https://tailwindcss.com) for styling
 - [Drizzle ORM](https://orm.drizzle.team) for database management
 - [PostgreSQL](https://www.postgresql.org) for data storage
-```
-
-
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+1. Go to [Vercel Dashboard](https://vercel.com).
+2. Click on **New Project**.
+3. Connect your GitHub repository.
+4. Set up environment variables (same as `.env.local`).
+5. Deploy the project.
+
+Your app will be live with automatic deployments on every push to the main branch.
+
+```
+
+This will render perfectly on GitHub with all the sections formatted properly.
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
